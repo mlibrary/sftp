@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app
+      - ./server/ssh/ssh_client_rsa_key:/etc/secret-volume/id_rsa:ro
+      - gem_cache:/gems
+    env_file:
+      - .env-dev-values
+  fileserver:
+    image: 'atmoz/sftp'
+    volumes:
+      - ./server/files:/home/my_user/files
+      - ./server/ssh/ssh_client_rsa_key.pub:/home/my_user/.ssh/keys/id_rsa.pub:ro
+      - ./server/ssh/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key
+      - ./server/ssh/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key
+    command: my_user:1001
+volumes:
+  gem_cache:
