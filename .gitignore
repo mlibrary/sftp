@@ -1,0 +1,16 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+.cache/
+.irb_history
+.ssh/known_hosts
+server/ssh/*
+!server/ssh/README.md
+
+# rspec failure tracking
+.rspec_status
