@@ -11,6 +11,7 @@
 .ssh/known_hosts
 server/ssh/*
 !server/ssh/README.md
+Gemfile.lock
 
 # rspec failure tracking
 .rspec_status

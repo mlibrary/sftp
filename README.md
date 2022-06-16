@@ -64,7 +64,10 @@ SFTP.client.ls("directory")
 
 ## Development
 
-#niquerio todo
+In the application root folder set up the ssh_keys
+```
+./bin/set_up_development_ssh_keys.sh
+```
 
 ## Contributing
 
