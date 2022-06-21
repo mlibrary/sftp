@@ -9,7 +9,7 @@ module SFTP
 
     # returns an array of items in a directory
     def ls(path = "")
-      run_an_sftp_command("$'@ls #{path}'").split("\n").map { |x| x.strip }
+      run_an_sftp_command("$'@ls #{path}'").split(/\s\s+/)
     end
 
     def get(path, destination)
