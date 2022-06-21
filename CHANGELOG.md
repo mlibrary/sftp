@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.1](https://www.github.com/mlibrary/sftp/compare/v0.2.0...v0.2.1) (2022-06-21)
+
+
+### Bug Fixes
+
+* fixes problem with ls ([#11](https://www.github.com/mlibrary/sftp/issues/11)) ([2ac9da2](https://www.github.com/mlibrary/sftp/commit/2ac9da25a3502def89e504af4b8bdecc97266700))
+
 ## [0.2.0](https://www.github.com/mlibrary/sftp/compare/v0.1.0...v0.2.0) (2022-06-16)
 
 
