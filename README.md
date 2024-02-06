@@ -4,10 +4,12 @@ This gem wraps shell `sftp` to make working with it in ruby scripts easier
 
 ## Installation
 
-Add this line to your application's Gemfile (niquerio todo: figure out what actually needs to be put here):
+Add this line to your application's Gemfile:
 
 ```ruby
-gem 'sftp'
+gem "sftp",
+  git: "https://github.com/mlibrary/sftp",
+  tag: "{latest_tag_goes_here}"
 ```
 
 And then execute:
