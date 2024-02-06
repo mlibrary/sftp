@@ -16,8 +16,16 @@ module SFTP
       run_an_sftp_command("$'@get #{path} #{destination}'")
     end
 
+    def get_r(path, destination)
+      run_an_sftp_command("$'@get -R #{path} #{destination}'")
+    end
+
     def rename(from, to)
       run_an_sftp_command("$'@rename #{from} #{to}'")
+    end
+
+    def put(path, destination)
+      run_an_sftp_command("$'@put #{path} #{destination}'")
     end
 
     private
