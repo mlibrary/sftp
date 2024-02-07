@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/mlibrary/sftp/compare/v0.2.1...v0.3.0) (2024-02-07)
+
+
+### Features
+
+* add get_r and put methods ([3e88d99](https://www.github.com/mlibrary/sftp/commit/3e88d9929c426aa6fc22923e98d2006af5686e59))
+
 ### [0.2.1](https://www.github.com/mlibrary/sftp/compare/v0.2.0...v0.2.1) (2022-06-21)
 
 
