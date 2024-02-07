@@ -1,4 +1,4 @@
-# Sftp
+# SFTP
 
 This gem wraps shell `sftp` to make working with it in Ruby scripts easier.
 
@@ -29,7 +29,7 @@ require "sftp"
 SFTP.configure do |config|
   config.user = "your_sftp_user"
   config.host = "your_sftp_host"
-  congig.key_paty = "path/to/your/ssh/key/file"
+  config.key_path = "path/to/your/ssh/key/file"
 end
 
 client = SFTP.client
@@ -88,11 +88,48 @@ SFTP.client.ls("directory")
 
 ## Development
 
-In the application root folder, set up the ssh_keys:
+Clone the repo
+
+```bash
+git clone git@github.com:mlibrary/sftp.git
+cd sftp
 ```
-./bin/set_up_development_ssh_keys.sh
+
+run the `init.sh` script. This will copy a pre-commit hook for git, build the
+container, and set up ssh keys for development. 
+```bash
+./init.sh
 ```
+start containers
+
+```bash
+docker compose up -d
+```
+
+The compose.yml has a fileserver service running sftp. The files are in the
+`server/files` directory. 
+
+To try out the gem you can run:
+```bash
+docker compose run --rm app console
+SFTP.client.ls
+```
+
+This will load the gem in irb, and connect you to the sftp service in compose.yml
+
+### Troubleshooting
+If the the `app` service can't connect to the `sftp` service, try restarting by
+doing:
+```bash
+docker compose down
+docker compose up -d
+```
+
+The ssh keys volume mounted in may not have been properly copied to
+`authorized_keys` in the `fileserver` service, and doing this hard restart will
+get the appropriate ones copied in. 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/mlibrary/sftp
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/mlibraray/sftp
