@@ -80,4 +80,18 @@ RSpec.describe SFTP::Client do
       subject.get("my/source/path", "my/destination/path")
     end
   end
+  context "#get_r" do
+    it "sends appropriate basic message to shell" do
+      command = [@sftp_command_base, "$'@get -R my/source/path my/destination/path'"].flatten
+      expect(@shell).to receive(:run).with(command)
+      subject.get_r("my/source/path", "my/destination/path")
+    end
+  end
+  context "#put" do
+    it "sends appropriate basic message to shell" do
+      command = [@sftp_command_base, "$'@put my/source/path my/destination/path'"].flatten
+      expect(@shell).to receive(:run).with(command)
+      subject.put("my/source/path", "my/destination/path")
+    end
+  end
 end
