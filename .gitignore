@@ -12,6 +12,7 @@
 server/ssh/*
 !server/ssh/README.md
 Gemfile.lock
+.bash_history
 
 # rspec failure tracking
 .rspec_status
