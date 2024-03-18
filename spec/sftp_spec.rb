@@ -95,3 +95,19 @@ RSpec.describe SFTP::Client do
     end
   end
 end
+
+RSpec.describe SFTP::Shell do
+  before(:each) do
+    @shell = SFTP::Shell
+  end
+
+  context "#run" do
+    it "throws Error when run fails" do
+      expect { @shell.run ["gobbledegook"] }.to raise_error(SFTP::Error)
+    end
+
+    it "returns the output from the command" do
+      expect(@shell.run(["ls"]).class.to_s).to eq("String")
+    end
+  end
+end
