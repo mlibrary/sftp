@@ -86,6 +86,8 @@ SFTP.client.ls("directory")
 # returns ["file1.txt"]
 ```
 
+If a failure occurs when an underlying `sftp` command is run, an `SFTP::Error` will be raised.
+
 ## Development
 
 Clone the repo
