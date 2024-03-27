@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/mlibrary/sftp/compare/sftp/v0.4.1...sftp/v0.4.2) (2024-03-27)
+
+
+### Bug Fixes
+
+* Merge pull request [#19](https://github.com/mlibrary/sftp/issues/19) from mlibrary/english ([e727cdf](https://github.com/mlibrary/sftp/commit/e727cdf2f76fa2459f7bcc87695104179b20cb31))
+
 ## [0.4.1](https://github.com/mlibrary/sftp/compare/sftp/v0.4.0...sftp/v0.4.1) (2024-03-27)
 
 
