@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/mlibrary/sftp/compare/sftp/v0.4.0...sftp/v0.4.1) (2024-03-27)
+
+
+### Bug Fixes
+
+* add packages write to get the ruby thing to release ([0108af1](https://github.com/mlibrary/sftp/commit/0108af1370629ff89a0c6118c0aa38fcbc0edb20))
+
 ## [0.4.0](https://github.com/mlibrary/sftp/compare/sftp-v0.3.0...sftp/v0.4.0) (2024-03-27)
 
 
