@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "English"
+
 require_relative "sftp/version"
 require_relative "sftp/configuration"
 require_relative "sftp/shell"
